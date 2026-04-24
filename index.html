@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gubug Kuliner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    /* Header dengan gambar background */
+    header {
+      background: url("malioboroo.jpg") center/cover no-repeat;
+      color: white;
+      text-align: center;
+      height: 50vh; /* full screen */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Overlay transparan */
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3); 
+      z-index: 0;
+    }
+
+    header h1, 
+    header p {
+      position: relative;
+      z-index: 1;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      margin: 0;
+    }
+
+    header h1 {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 20px;
+    }
+
+    /* Container menu */
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .menu-item {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .menu-item h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .menu-item p {
+      color: #e74c3c;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    /* Tombol reservasi */
+    .reservasi-btn {
+      display: block;
+      margin: 30px auto 50px auto;
+      background: #27ae60;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      min-width: 44px;
+      min-height: 44px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .reservasi-btn:hover {
+      background: #2ecc71;
+    }
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+      .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Smartphone */
+    @media (max-width: 600px) {
+      .menu-container {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 32px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gubug Kuliner</h1>
+    <p>Kenikmatan khas desa selalu di hati</p>
+  </header>
+
+  <div class="menu-container">
+    <div class="menu-item">
+      <img src="Nasi Goreng.jpg" alt="Menu Nasi Goreng">
+      <h3>Nasi Goreng</h3>
+      <p>Rp 15.000</p>
+    </div>
+    <div class="menu-item">
+      <img src="Bakso.jpg" alt="Menu Bakso">
+      <h3>Bakso</h3>
+      <p>Rp 20.000</p>
+    </div>
+    <div class="menu-item">
+      <img src="Mie Ayam.jpg" alt="Menu Mie Ayam">
+      <h3>Mie Ayam</h3>
+      <p>Rp 10.000</p>
+    </div>
+    <div class="menu-item">
+      <img src="Ayam Geprek.jpg" alt="Menu Ayam Geprek">
+      <h3>Ayam Geprek</h3>
+      <p>Rp 15.000</p>
+    </div>
+    <div class="menu-item">
+      <img src="Soto Ayam.jpg" alt="Menu Soto Ayam">
+      <h3>Soto Ayam</h3>
+      <p>Rp 15.000</p>
+    </div>
+    <div class="menu-item">
+      <img src="Sate Ayam.jpg" alt="Menu Sate Ayam">
+      <h3>Sate Ayam</h3>
+      <p>Rp 10.000</p>
+    </div>
+  </div>
+
+  <button class="reservasi-btn">Reservasi Meja</button>
+</body>
+</html>
